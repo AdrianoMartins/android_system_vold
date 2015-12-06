@@ -79,6 +79,10 @@ ifeq ($(TARGET_KERNEL_HAVE_EXFAT),true)
 vold_cflags += -DCONFIG_KERNEL_HAVE_EXFAT
 endif
 
+ifeq ($(TARGET_KERNEL_HAVE_NTFS),true)
+vold_cflags += -DCONFIG_KERNEL_HAVE_NTFS
+endif
+
 required_modules :=
 ifeq ($(TARGET_USERIMAGES_USE_EXT4), true)
   ifeq ($(TARGET_USES_MKE2FS), true)
